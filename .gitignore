@@ -43,4 +43,27 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+<<<<<<< HEAD
 /android/app/build/
+=======
+/android/app/build/
+>>>>>>> master
+# Flutter/Dart
+*.dart_tool/
+*.idea/
+*.iml
+build/
+/android/app/build/
+/ios/Pods/
+/ios/Podfile.lock
+/ios/Runner.xcworkspace/
+*.xcuserstate
+.env
+*.flutter-plugins
+*.flutter-plugins-dependencies
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+*.log
+*.lock
