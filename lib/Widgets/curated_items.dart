@@ -1,4 +1,3 @@
-
 import 'package:e_commerce/Models/app_model.dart';
 import 'package:flutter/material.dart';
 
@@ -12,14 +11,101 @@ class CuratedItems extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Column(children: [
-      Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),image: DecorationImage(image: AssetImage(eCommerceItems.image),
+ Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start, 
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.grey, // Replace with your backgroundColor2
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(eCommerceItems.image),
+            ),
+          ),
+          height: size.height * 0.25,
+          width: size.width * 0.5,
+          child: Padding(
+          padding: const EdgeInsets.all(12),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: CircleAvatar(
+                radius: 18,
+                backgroundColor: Colors.black26,
+                child: const Icon(
+                  Icons.favorite_border,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
         ),
+        SizedBox(height: 7),
+        Row(
+          //mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            const Text(
+              "H&M",
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: Colors.black26,
+              ),
+            ),
+            const SizedBox(width: 5),
+            const Icon(
+              Icons.star,
+              color: Colors.amber,
+              size: 17,
+            ),
+          ]
         ),
+             SizedBox(
+              
+                width: size.width * 0.5,
+                child: Text(
+                eCommerceItems.title,
+                //textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+                height: 1.5,
+                
+                
+                      ),
+                 ),
+              ),
+              
+     
+Row(
+  children: [
+    Text(
+      "\$${eCommerceItems.price.toString()}.00",
+      style: const TextStyle(
+        fontWeight: FontWeight.w600,
+        fontSize: 18,
+        color: Colors.pink,
+        height: 1.5,
       ),
-      ],
-    );
-  }
+    ),
+    SizedBox(width: 5),
+    if(eCommerceItems.isCheck == true)
+     Text(
+      "\$${eCommerceItems.price + "250"}.00",
+      style: const TextStyle(
+       color: Colors.black26,
+       decoration: TextDecoration.lineThrough, 
+       decorationColor: Colors.black26,
+      ),
+    ),
+  ],
+),
+
+],
+);
+
+
+}
 }

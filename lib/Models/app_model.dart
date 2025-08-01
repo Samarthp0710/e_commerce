@@ -3,6 +3,8 @@ class AppModel {
   final String title;
   final String price;
 
+  var isCheck;
+
   AppModel({
     required this.image,
     required this.title,
@@ -13,18 +15,23 @@ class AppModel {
 // Dummy data for now
 List<AppModel> fashionEcommerceApp = [
   AppModel(
-    image: 'assets/images_req/item1.png',
+    image: 'assets/images _req/jacket.png',
     title: 'Stylish Jacket',
     price: '₹1299',
   ),
   AppModel(
-    image: 'assets/images_req/item2.png',
-    title: 'Summer Dress',
+    image: 'assets/images _req/kurtas.png',
+    title: 'Kurtas',
     price: '₹999',
   ),
   AppModel(
-    image: 'assets/images_req/item3.png',
+    image: 'assets/images _req/shoes.png',
     title: 'Casual Shoes',
     price: '₹1599',
+  ),
+  AppModel(
+    image: 'assets/images _req/jeans.png',
+    title: 'Jeans',
+    price: '₹799',
   ),
 ];

@@ -66,6 +66,10 @@ flutter:
      - assets\images _req\teen.png
      - assets\images _req\kid.png
      - assets\images _req\baby.png
+     - assets\images _req\jacket.png
+     - assets\images _req\kurtas.png
+     - assets\images _req\shoes.png
+     - assets\images _req\jeans.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
