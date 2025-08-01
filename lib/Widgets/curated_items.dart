@@ -93,7 +93,7 @@ Row(
     SizedBox(width: 5),
     if(eCommerceItems.isCheck == true)
      Text(
-      "\$${eCommerceItems.price + "250"}.00",
+      "\$${"${eCommerceItems.price}250"}.00",
       style: const TextStyle(
        color: Colors.black26,
        decoration: TextDecoration.lineThrough, 
